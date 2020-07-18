@@ -23,11 +23,17 @@ Route::get('/showdetail/{name}/{age}/{text}', function ($name, $age, $text) {
 
 Route::get('/ปลาหยุด/{num1}/{num2}', function ($num1,$num2) {
     return "$num1 , $num2";
-});*/
+});
 
-Route::get('/','HomeController@index');
+Route::get('/', 'HomeController@index');
 Route::get('greating/{name}', 'HomeController@index');
 Route::get('/บวกเลข/{num1}/{num2}/{num3}', 'HomeController@บวกเลข');
 Route::get('/user', 'UserController@index');
 Route::get('/user/show/{id}', 'UserController@show');
 Route::get('/user/update/{id2}', 'UserController@update');
+*/
+
+
+Route::get('/todo', 'TodoController@index');
+Route::get('/todo/show/{id}', 'TodoController@show');
+Route::get('/todo/delete/{id}', 'TodoController@delete');
