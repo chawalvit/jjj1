@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/showdetail/{name}/{age}/{text}', function ($name, $age, $text) {
+    return "สวัสดี, $name คุณมีอายุ $age และคุณพูดว่า '$text'";
+});
+
+/*Route::get('/ปลาหยุด/{num1}/{num2}', function ($num1,$num2) {
+    return "$num1 , $num2";
+});*/
